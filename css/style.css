@@ -480,27 +480,26 @@ h3,
 .benefit-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  gap: 12px;
 }
 
 .benefit-card {
   min-height: 330px;
   padding: 26px;
   position: relative;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  transition: color .25s ease, background .25s ease;
-}
-
-.benefit-card:hover {
   color: var(--white);
   background: var(--green);
-  transform: translateY(-6px);
+  border-radius: 16px;
+  transition: transform .3s cubic-bezier(.22, 1, .36, 1), box-shadow .3s ease;
 }
 
+.benefit-card:nth-child(1) { background: var(--orange); }
+.benefit-card:nth-child(2) { background: var(--green); }
+.benefit-card:nth-child(3) { background: #315c68; }
+.benefit-card:nth-child(4) { background: #7b463e; }
+
 .card-number {
-  color: #89948f;
+  color: rgba(255, 255, 255, .62);
   font-size: 12px;
 }
 
@@ -523,13 +522,14 @@ h3,
 
 .benefit-card p {
   margin: 0;
-  color: var(--muted);
+  color: rgba(255, 255, 255, .72);
   font-size: 14px;
 }
 
-.benefit-card:hover p,
-.benefit-card:hover .card-number {
-  color: rgba(255, 255, 255, .66);
+.benefit-card:hover {
+  z-index: 1;
+  transform: scale(1.025);
+  box-shadow: 0 20px 42px rgba(20, 35, 29, .2);
 }
 
 .programs {
