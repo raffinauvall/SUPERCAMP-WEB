@@ -871,6 +871,34 @@ h3,
   color: rgba(255, 255, 255, .65);
 }
 
+.location-list {
+  max-width: 720px;
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.contact-card .location-list p {
+  padding: 14px 16px;
+  color: rgba(255, 255, 255, .76);
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.location-list span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--orange);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
 .contact-actions {
   display: flex;
   flex-direction: column;
@@ -1132,6 +1160,16 @@ footer {
   color: rgba(255, 255, 255, .58);
   font-size: 13px;
   font-style: normal;
+}
+
+.footer-grid address span {
+  display: block;
+  color: rgba(255, 255, 255, .85);
+  font-weight: 700;
+}
+
+.footer-grid address span:not(:first-child) {
+  margin-top: 12px;
 }
 
 .footer-grid p {
@@ -1405,6 +1443,10 @@ footer {
     width: 100%;
     padding: 44px 24px;
     border-radius: 0;
+  }
+
+  .location-list {
+    grid-template-columns: 1fr;
   }
 
   .modal-head,
