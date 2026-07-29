@@ -350,7 +350,7 @@
   <script>
     const motion = !matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window;
     if (motion) {
-      const items = document.querySelectorAll(".section-heading, .intro-grid > *, .benefit-card, .program-card, .facilities-photo, .facilities-copy, .featured-alumni article, .gallery-grid img, .contact-card > *");
+      const items = document.querySelectorAll(".section-heading, .intro-grid > *, .program-card, .facilities-photo, .facilities-copy, .featured-alumni article, .gallery-grid img, .contact-card > *");
       const observer = new IntersectionObserver(entries => entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
