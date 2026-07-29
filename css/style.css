@@ -600,8 +600,26 @@ h3,
 
 .program-card > p {
   max-width: 500px;
-  margin-bottom: 34px;
+  margin-bottom: 22px;
   opacity: .75;
+}
+
+.price-from {
+  margin-bottom: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.price-from span {
+  font-size: 12px;
+  opacity: .65;
+}
+
+.price-from strong {
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 25px;
+  letter-spacing: -.04em;
 }
 
 .program-card ul {
@@ -929,6 +947,85 @@ h3,
   margin: 28px 0 8px;
   color: var(--ink);
   font-size: 17px;
+}
+
+.pricing-title {
+  margin-top: 30px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pricing-title h3,
+.pricing-title p {
+  margin: 0;
+}
+
+.pricing-title p {
+  max-width: 320px;
+  font-size: 13px;
+  text-align: right;
+}
+
+.pricing-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.price-card {
+  padding: 20px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid transparent;
+  border-radius: 14px;
+}
+
+.price-card > span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.price-card > p {
+  margin: 10px 0 2px;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.price-card > p strong {
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 34px;
+  letter-spacing: -.05em;
+}
+
+.price-card small {
+  display: block;
+  min-height: 40px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.price-card em {
+  margin-top: 14px;
+  padding: 7px 9px;
+  display: inline-block;
+  color: #a74020;
+  background: #ffe2d6;
+  border-radius: 7px;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.price-featured {
+  background: #edf3ef;
+  border-color: #cbdad1;
 }
 
 .modal-facts {
@@ -1316,8 +1413,19 @@ footer {
   }
 
   .modal-facts,
-  .modal-list {
+  .modal-list,
+  .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .pricing-title p {
+    text-align: left;
   }
 
   .modal-actions {
