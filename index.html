@@ -66,6 +66,16 @@
         <a href="#galeri">Galeri</a>
       </div>
       <a class="button button-small" href="https://wa.me/6282125803628?text=Halo%20Bimbel%20C3%2C%20saya%20ingin%20konsultasi%20program%202027.">Konsultasi gratis <span aria-hidden="true">↗</span></a>
+      <details class="mobile-nav">
+        <summary aria-label="Buka menu navigasi"><span></span><span></span><span></span></summary>
+        <div class="mobile-menu">
+          <a href="#tentang">Tentang</a>
+          <a href="#program">Program</a>
+          <a href="#alumni">Alumni</a>
+          <a href="#galeri">Galeri</a>
+          <a class="mobile-menu-cta" href="https://wa.me/6282125803628?text=Halo%20Bimbel%20C3%2C%20saya%20ingin%20konsultasi%20program%202027.">Konsultasi gratis <span aria-hidden="true">↗</span></a>
+        </div>
+      </details>
     </nav>
   </header>
 
@@ -466,6 +476,9 @@
       dialog.addEventListener("click", event => {
         if (event.target === dialog) dialog.close();
       })
+    );
+    document.querySelectorAll(".mobile-menu a").forEach(link =>
+      link.addEventListener("click", () => link.closest("details").removeAttribute("open"))
     );
   </script>
 </body>

@@ -147,6 +147,10 @@ h3,
   opacity: 1;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .button {
   min-height: 52px;
   padding: 0 22px;
@@ -1308,6 +1312,89 @@ footer {
 
   .nav {
     min-height: 70px;
+    gap: 16px;
+  }
+
+  .nav > .button {
+    display: none;
+  }
+
+  .mobile-nav {
+    position: relative;
+    margin-left: auto;
+    display: block;
+  }
+
+  .mobile-nav summary {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 50%;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .mobile-nav summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-nav summary span {
+    width: 17px;
+    height: 1.5px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  .mobile-nav[open] summary span:first-child {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+
+  .mobile-nav[open] summary span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-nav[open] summary span:last-child {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  .mobile-menu {
+    width: min(280px, calc(100vw - 28px));
+    padding: 10px;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    display: grid;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(6, 25, 18, .25);
+  }
+
+  .mobile-menu a {
+    padding: 11px 12px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .mobile-menu a:hover {
+    background: var(--cream);
+  }
+
+  .mobile-menu .mobile-menu-cta {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    background: var(--orange);
   }
 
   .nav .button {
@@ -1333,6 +1420,10 @@ footer {
     padding-block: 60px;
     grid-template-columns: 1fr;
     gap: 55px;
+  }
+
+  .hero {
+    min-height: calc(100svh - 70px);
   }
 
   .hero h1 {
