@@ -813,14 +813,14 @@ h3,
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 235px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 10px;
   transition: transform .45s cubic-bezier(.22, 1, .36, 1), filter .45s ease;
@@ -832,12 +832,12 @@ h3,
   transform: scale(1.025);
 }
 
-.gallery-grid img:first-child {
-  grid-row: span 2;
+.gallery-wide {
+  grid-column: auto;
 }
 
-.gallery-wide {
-  grid-column: span 2;
+.gallery-grid img:first-child {
+  object-position: center 62%;
 }
 
 .contact {
@@ -1474,11 +1474,11 @@ footer {
   }
 
   .gallery-grid {
-    grid-auto-rows: 180px;
+    grid-template-columns: 1fr;
   }
 
   .gallery-wide {
-    grid-column: span 2;
+    grid-column: auto;
   }
 
   .contact-card {
