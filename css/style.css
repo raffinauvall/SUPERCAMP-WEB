@@ -179,6 +179,9 @@ h3,
 
 .hero {
   position: relative;
+  min-height: calc(100svh - 78px);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   color: var(--white);
   background: var(--green);
@@ -197,6 +200,7 @@ h3,
 }
 
 .hero-grid {
+  flex: 1;
   min-height: 680px;
   padding-block: 68px 78px;
   display: grid;
